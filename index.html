@@ -518,9 +518,10 @@
     }
   });
 
-      // Ação final do botão "Comprar agora" dentro do modal
+        // Ação final do botão "Comprar agora" dentro do modal
   document.getElementById('btn-comprar-modal').addEventListener('click', () => {
-    window.location.href = 'checkout.html?qtd=' + qtd;
+    sessionStorage.setItem('quantidade', qtd);
+    window.location.href = 'checkout.html';
   });
 
   // ==========================================
