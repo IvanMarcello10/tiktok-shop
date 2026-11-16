@@ -233,8 +233,11 @@
     e.target.value = v;
   });
 
-  // Quantidade
-  let quantidade = 1;
+    // Lê a quantidade que veio da URL (index.html)
+  const params = new URLSearchParams(window.location.search);
+  const qtdInicial = parseInt(params.get('qtd')) || 1;
+  
+  let quantidade = qtdInicial;
   const precoProduto = 99.00;
   const qtdSpan = document.getElementById('qtd-produto');
   const btnMais = document.getElementById('btn-qtd-mais');
